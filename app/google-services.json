@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "262074333066",
+    "firebase_url": "https://fithouse-e24a8-default-rtdb.firebaseio.com",
+    "project_id": "fithouse-e24a8",
+    "storage_bucket": "fithouse-e24a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262074333066:android:516132e7913f1863187a73",
+        "android_client_info": {
+          "package_name": "com.example.fithouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262074333066-fam07gdssjt0j5nc7lqk8hu3q4urv2sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi1Vva5VV5xvBLtQ0DJV9mQph0MG0JX9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262074333066-fam07gdssjt0j5nc7lqk8hu3q4urv2sm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,7 +32,6 @@ public class menuActivity extends AppCompatActivity {
             }
         });
 
-        ConexionDB.connect();
 
     }
     private void abrirCreatina(){

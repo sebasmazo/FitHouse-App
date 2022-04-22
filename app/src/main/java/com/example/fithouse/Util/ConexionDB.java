@@ -1,31 +1,55 @@
 package com.example.fithouse.Util;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import android.database.sqlite.*;
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import java.util.ArrayList;
 
 public class ConexionDB {
 
-    //Error: Al ejecutar la app el dispositivo no tiene acceso a la base de datos, por lo tanto la única manera
-    //de usar sqlite sería que el dispositivo movil cree la base de datos en memoria, y a su vez cargar todos los
-    //datos correspondientes
-    public static void connect(){
-        Connection conn = null;
-        try {
-            //SQLiteDatabase db = SQLiteDatabase.openDatabase("db/fithouse.sqlite",null,0);
-            //db.execSQL("select * from creatinas");
-            //System.out.println("Working Directory = " + System.getProperty("user.dir"));
-            //String url = "jdbc:sqlite:db/fithouse.sqlite";
-            //conn = DriverManager.getConnection(url);
-            //System.out.println("Conexión establecida");
-        } finally {
-            System.out.println("S");
-            //if (conn != null) {
-            //conn.close();
-            //}
-        }
+    public static ArrayList<Creatina> GetCreatine()
+    {
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        ArrayList<Creatina> arrayList = new ArrayList<>();
+        ValueEventListener valueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    arrayList.clear();
+                    for (DataSnapshot dato : dataSnapshot.getChildren()){
+                        String imagen = (String) dato.child("imagen").getValue();
+                        double precio = (double) dato.child("precio").getValue(double.class);
+                        String marca = (String) dato.child("marca").getValue();
+                        double cantidad = (double) dato.child("cantidad").getValue(double.class);
+                        double servicios = (double) dato.child("servicios").getValue(double.class);
+                        String informacion_nutricional = (String) dato.child("informacion_nutricional").getValue();
+                        String descripcion = (String) dato.child("descripcion").getValue();
+                        arrayList.add(new Creatina(imagen,precio,marca,cantidad,servicios,informacion_nutricional,descripcion));
+                        //Problemas de velocidad en la consulta hacen imposible disponer de los datos en la clase CreatiActivity
+                        //al tener que hacer consulta para cada campo de la colección.
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        };
+        database.child("creatinas").addListenerForSingleValueEvent(valueEventListener);
+        return arrayList;
     }
+
 
 }

@@ -10,16 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitHouse" >
-        <activity
-            android:name=".CreatiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProteActivity"
-            android:exported="false" />
+        <activity android:name=".creatiActivity" />
 
-        <activity
-            android:name=".menuActivity"
-            android:exported="false" />
+        <activity android:name=".ProteActivity" />
+
+        <activity android:name=".menuActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true" >

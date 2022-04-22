@@ -7,8 +7,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fithouse.Util.ConexionDB;
-
 public class menuActivity extends AppCompatActivity {
     private Button buttoncrea, buttonprote;
     @Override
@@ -35,7 +33,7 @@ public class menuActivity extends AppCompatActivity {
 
     }
     private void abrirCreatina(){
-        Intent i = new Intent(this, CreatiActivity.class);
+        Intent i = new Intent(menuActivity.this, creatiActivity.class);
         startActivity(i);
     }
     private void abrirProteina(){

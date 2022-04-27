@@ -23,6 +23,9 @@ public class Suplemento extends Application {
         this.informacion_nutricional = informacion_nutricional;
         this.descripcion = descripcion;
     }
+    public String getName(){
+        return this.getClass().getSimpleName() +" - "+this.marca;
+    }
 
     public Suplemento(String marca) {
         this.marca = marca;
@@ -36,8 +39,8 @@ public class Suplemento extends Application {
         this.imagen = imagen;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getPrecio() {
+        return precio+"";
     }
 
     public void setPrecio(double precio) {
@@ -52,16 +55,16 @@ public class Suplemento extends Application {
         this.marca = marca;
     }
 
-    public double getCantidad() {
-        return cantidad;
+    public String getCantidad() {
+        return cantidad+"";
     }
 
     public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
     }
 
-    public double getServicios() {
-        return servicios;
+    public String getServicios() {
+        return servicios+"";
     }
 
     public void setServicios(double servicios) {
@@ -83,4 +86,5 @@ public class Suplemento extends Application {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
 }

@@ -37,6 +37,7 @@ public class menuActivity extends AppCompatActivity {
     private void abrirCreatina(){
         Intent i = new Intent(this, CreatiActivity.class);
         startActivity(i);
+
     }
     private void abrirProteina(){
         Intent i2 = new Intent(menuActivity.this, ProteActivity.class);

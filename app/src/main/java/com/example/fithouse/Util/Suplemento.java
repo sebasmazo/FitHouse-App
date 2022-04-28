@@ -2,7 +2,9 @@ package com.example.fithouse.Util;
 
 import android.app.Application;
 
-public class Suplemento extends Application {
+import java.io.Serializable;
+
+public class Suplemento extends Application implements Serializable {
     public Suplemento() {
     }
 

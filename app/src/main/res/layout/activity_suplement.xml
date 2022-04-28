@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuplementActivity">
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/fithouselogo"
+        android:background="@color/white"
+
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/Logo"
+        android:layout_marginTop="30dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="FITHOUSE"
+        android:textSize="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/divisor"
+        android:layout_height="5dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Logo"
+        android:layout_marginTop="10dp"
+        android:src="@color/black"
+    />
+
+    <TextView
+        android:id="@+id/txtNameSuplement"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="206dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/divisor"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Product Type - Product Name" />
+
+    <TextView
+        android:id="@+id/txtPriceSuplement"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divisor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/txtNameSuplement"
+        android:text="#######$" />
+
+    <TextView
+        android:id="@+id/brand"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNameSuplement"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Marca:" />
+
+    <TextView
+        android:id="@+id/txtBrandSuplement"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="85dp"
+        android:layout_height="39dp"
+        android:layout_below="@id/txtNameSuplement"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/brand"
+        android:text="Brand" />
+
+    <TextView
+        android:id="@+id/ammount"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brand"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Cantidad:" />
+
+    <TextView
+        android:id="@+id/txtAmmountSuplement"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brand"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/ammount"
+        android:text="Ammount" />
+
+    <TextView
+        android:id="@+id/servings"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAmmountSuplement"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Servicios:" />
+
+    <TextView
+        android:id="@+id/txtServingsSuplement"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAmmountSuplement"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/ammount"
+        android:text="Servings" />
+
+    <ImageView
+        android:id="@+id/Image_product"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/txtPriceSuplement"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toRightOf="@id/txtAmmountSuplement"
+        android:src="@drawable/fithouselogowhite"
+        android:background="@drawable/img"/>
+
+    <TextView
+        android:id="@+id/informacionNutricional"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtServingsSuplement"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:text="Información nutricional" />
+
+    <ImageView
+        android:id="@+id/imageInfo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/informacionNutricional"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/img"
+        android:src="@drawable/fithouselogowhite" />
+    <TextView
+        android:id="@+id/descricion"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageInfo"
+        android:text="Descripción"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/txtdescricionSuplement"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descricion"
+        android:layout_centerInParent="true"
+        android:text="Descripción" />
+</RelativeLayout>

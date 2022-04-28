@@ -1,9 +1,12 @@
 package com.example.fithouse;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +41,7 @@ public class ProteActivity extends AppCompatActivity {
         protected Integer doInBackground(String... strings) {
             arrayList = ConexionDB.GetProteine();
             try {
-                Thread.sleep(2000);
+                Thread.sleep(600);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -64,6 +67,13 @@ public class ProteActivity extends AppCompatActivity {
             listView = findViewById(R.id.listView);
             SuplementAdapter suplementAdapter = new SuplementAdapter(ProteActivity.this,R.layout.list_row,(ArrayList<Suplemento>) arrayList);
             listView.setAdapter(suplementAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Log.println(Log.INFO,"SUPLEMENTO A ENVIAR","Se envió el #: "+i+ "correspondiente a marca: "+arrayList.get(i).getMarca());
+                    startActivity(new Intent(ProteActivity.this,SuplementActivity.class).putExtra("suplemento", arrayList.get(i)));
+                }
+            });
             pdLoading.dismiss();
         }
     }

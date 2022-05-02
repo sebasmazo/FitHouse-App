@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Proyectos_Programacion/Universidad/Semestre_2022-01/Aplicaciones_Moviles/Fit_House/FitHouse-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
+        <entry key="..\:/Proyectos_Programacion/Universidad/Semestre_2022-01/Aplicaciones_Moviles/Fit_House/FitHouse-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199" />
         <entry key="..\:/Proyectos_Programacion/Universidad/Semestre_2022-01/Aplicaciones_Moviles/Fit_House/FitHouse-App/app/src/main/res/layout/activity_main.xml" value="0.37135416666666665" />
+        <entry key="..\:/Proyectos_Programacion/Universidad/Semestre_2022-01/Aplicaciones_Moviles/Fit_House/FitHouse-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2535" />
         <entry key="..\:/Users/magoz/Desktop/Fit_House/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.194" />
         <entry key="..\:/Users/magoz/Desktop/Fit_House/app/src/main/res/layout/activity_creati.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/magoz/Desktop/Fit_House/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />

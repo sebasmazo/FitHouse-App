@@ -1,4 +1,4 @@
-package com.example.fithouse;
+package com.upb.fithouse;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,13 +11,12 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fithouse.Util.ConexionDB;
-import com.example.fithouse.Util.Suplemento;
+import com.upb.fithouse.Util.ConexionDB;
+import com.upb.fithouse.Util.Suplemento;
 
 import java.util.ArrayList;
 
-public class ProteActivity extends AppCompatActivity {
-
+public class CreatiActivity extends AppCompatActivity {
     ListView listView;
 
     ArrayList<Suplemento> arrayList = new ArrayList();
@@ -33,13 +32,13 @@ public class ProteActivity extends AppCompatActivity {
         // TODO Auto-generated method stub
         super.onResume();
 
-        new ProteActivity.MyTask().execute();
+        new MyTask().execute();
     }
     private class MyTask extends AsyncTask<String, Void, Integer> {
-        ProgressDialog pdLoading = new ProgressDialog(ProteActivity.this);
+        ProgressDialog pdLoading = new ProgressDialog(CreatiActivity.this);
         @Override
         protected Integer doInBackground(String... strings) {
-            arrayList = ConexionDB.GetProteine();
+            arrayList = ConexionDB.GetCreatine();
             try {
                 Thread.sleep(600);
             } catch (InterruptedException e) {
@@ -65,13 +64,13 @@ public class ProteActivity extends AppCompatActivity {
                 startActivity(getIntent());
             }
             listView = findViewById(R.id.listView);
-            SuplementAdapter suplementAdapter = new SuplementAdapter(ProteActivity.this,R.layout.list_row,(ArrayList<Suplemento>) arrayList);
+            SuplementAdapter suplementAdapter = new SuplementAdapter(CreatiActivity.this,R.layout.list_row,(ArrayList<Suplemento>) arrayList);
             listView.setAdapter(suplementAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Log.println(Log.INFO,"SUPLEMENTO A ENVIAR","Se envió el #: "+i+ "correspondiente a marca: "+arrayList.get(i).getMarca());
-                    startActivity(new Intent(ProteActivity.this,SuplementActivity.class).putExtra("suplemento", arrayList.get(i)));
+                    startActivity(new Intent(CreatiActivity.this,SuplementActivity.class).putExtra("suplemento", arrayList.get(i)));
                 }
             });
             pdLoading.dismiss();

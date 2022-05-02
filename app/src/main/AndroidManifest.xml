@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fithouse">
+    package="com.upb.fithouse">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".Util.Suplemento"
+        android:name="com.upb.fithouse.Util.Suplemento"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,19 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitHouse">
         <activity
-            android:name=".SuplementActivity"
+            android:name="com.upb.fithouse.SuplementActivity"
             android:exported="false" />
         <activity
-            android:name=".CreatiActivity"
+            android:name="com.upb.fithouse.CreatiActivity"
             android:exported="false" />
         <activity
-            android:name=".ProteActivity"
+            android:name="com.upb.fithouse.ProteActivity"
             android:exported="false" />
         <activity
-            android:name=".menuActivity"
+            android:name="com.upb.fithouse.menuActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.upb.fithouse.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

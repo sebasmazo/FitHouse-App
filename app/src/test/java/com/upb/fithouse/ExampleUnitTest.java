@@ -1,4 +1,4 @@
-package com.example.fithouse;
+package com.upb.fithouse;
 
 import org.junit.Test;
 

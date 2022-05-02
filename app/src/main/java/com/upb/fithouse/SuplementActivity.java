@@ -1,20 +1,13 @@
-package com.example.fithouse;
+package com.upb.fithouse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.fithouse.Util.ConexionDB;
-import com.example.fithouse.Util.Suplemento;
+import com.upb.fithouse.Util.Suplemento;
 import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
 
 public class SuplementActivity extends AppCompatActivity {
 

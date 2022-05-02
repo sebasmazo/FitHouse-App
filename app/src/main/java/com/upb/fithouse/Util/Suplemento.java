@@ -1,4 +1,4 @@
-package com.example.fithouse.Util;
+package com.upb.fithouse.Util;
 
 import android.app.Application;
 

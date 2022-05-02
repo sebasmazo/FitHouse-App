@@ -1,4 +1,4 @@
-package com.example.fithouse;
+package com.upb.fithouse;
 
 import android.content.Intent;
 import android.os.Bundle;
